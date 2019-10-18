@@ -5,20 +5,15 @@ module.exports = {
         return string.replace(/\b\w/g, l => l.toUpperCase());
     },
 
-    firstcharLC: function(string){
-      return string.replace(/\b\w/g, l => l.toLowerCase());
-    },
-
     rdm: function(max){
         return Math.floor(Math.random() * Math.floor(max));
     },
 
-    sendEmbed: function(message, author, authoricon, color, thumbnail, field, image){
+    sendEmbed: function(message, author, authoricon, color, thumbnail, field){
         let embed = new Discord.RichEmbed()
             .setAuthor(author, authoricon)
             .setColor(color)
             .setThumbnail(thumbnail)
-            .setImage(image)
         if(field){
             field.forEach(fd =>
                 {embed.addField(fd.title, fd.desc, fd.inline);

@@ -1,22 +1,28 @@
 {
   "name": "bubulle-bot",
   "version": "1.0.0",
-  "description": "A discord bot made for a community ( Bubulle family ) in nodejs.",
+  "description": "a personnal bot discord for bubulle family",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eadroma/Bubulle-bot.git"
+    "url": "git+https://gitlab.com/Eadroma/bubulle-bot.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Eadroma/Bubulle-bot/issues"
+    "url": "https://gitlab.com/Eadroma/bubulle-bot/issues"
   },
-  "homepage": "https://github.com/Eadroma/Bubulle-bot#readme",
+  "homepage": "https://gitlab.com/Eadroma/bubulle-bot#README",
   "dependencies": {
-    "discord.js": "^11.5.1"
-  }
+    "discord.js": "^11.4.2",
+    "nodemon": "^1.18.9",
+    "quick.db": "^7.0.0-b21",
+    "request": "^2.88.0",
+    "string-similarity": "^3.0.0"
+  },
+  "devDependencies": {}
 }

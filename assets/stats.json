@@ -1,0 +1,10 @@
+{
+    "idtitle": "ID",
+    "servertitle": "ServerName",
+    "ownertitle": "Owner",
+    "channeltitle": "Channels",
+    "membertitle": "Members",
+    "onlinetitle": "Online",
+    "roletitle": "Roles",
+    "createdtitle": "Server created at"
+  }

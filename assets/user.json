@@ -1,0 +1,8 @@
+{
+    "id": "ID",
+    "name": "Name",
+    "status": "Status",
+    "tag": "tag",
+    "join": "created this account at",
+    "play": "Playing at"
+  }
