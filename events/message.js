@@ -5,18 +5,16 @@ module.exports = (client, message) => {
     const command = args.shift().toLowerCase();
     const functions = require("../functions.js");
     let cmd;
+
     if (message.author.bot) 
         return;
-    if(message.content.indexOf(config.prefix) !== 0) 
+    if (message.content.indexOf(config.prefix)) 
         return;
-
-    
-    if(client.commands.has(command))
+    if (client.commands.has(command))
         cmd = client.commands.get(command);
     try {
         cmd.run(client, message, args, functions);
     } catch (err) {
         return;
     };
-
 };
