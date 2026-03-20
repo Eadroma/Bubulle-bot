@@ -1,13 +1,15 @@
-exports.run = (client, message, args, functions) => {
-    let max = args;
+exports.run = async (client, message, args, functions) => {
+    let max = args[0] ? parseInt(args[0]) : 100;
+    if (isNaN(max)) max = 100;
+    
     let random = Math.ceil(Math.random() * max);
     if(random == 0){
       random = 1;
     }
-    functions.sendEmbed(message, message.guild.name, message.guild.iconURL, "RANDOM", message.guild.iconURL, [{
+    const icon = message.guild.iconURL() || "";
+    functions.sendEmbed(message, message.guild.name, icon, "Random", icon, [{
         title : '<a:diceroll:633604114206687232> - Lancement du dés !', desc: ` Vous êtes tombé sur ** ${random} ** !`
-    }])
-
+    }]);
   }
   
   exports.help = {

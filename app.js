@@ -1,9 +1,16 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const { Client, Collection, GatewayIntentBits } = require("discord.js");
 const fs = require("fs");
 const config = require("./assets/config.json");
 
-client.commands = new Discord.Collection();
+const client = new Client({ 
+    intents: [
+        GatewayIntentBits.Guilds, 
+        GatewayIntentBits.GuildMessages, 
+        GatewayIntentBits.MessageContent 
+    ] 
+});
+
+client.commands = new Collection();
 
 fs.readdir("./events/", (err, files) => {
     if (err) 
